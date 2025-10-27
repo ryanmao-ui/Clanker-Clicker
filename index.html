@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Royale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Casino Royale</h1>
+        <div id="money-display">Money: $<span id="player-money">1000</span></div>
+    </header>
+
+    <nav>
+        <button id="show-blackjack-btn">Blackjack</button>
+        <button id="show-roulette-btn">Roulette</button>
+    </nav>
+
+    <main class="game-container">
+        <!-- Blackjack Panel -->
+        <div id="blackjack-panel" class="game-panel active">
+            <h2>Blackjack</h2>
+            <div class="game-area">
+                <div class="hand">
+                    <h3>Dealer's Hand:</h3>
+                    <div id="dealer-hand"></div>
+                    <p id="dealer-score"></p>
+                </div>
+                <div class="hand">
+                    <h3>Your Hand:</h3>
+                    <div id="player-hand"></div>
+                    <p id="player-score"></p>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="betting-controls">
+                    <input type="number" id="blackjack-bet" min="1" value="10">
+                    <button id="blackjack-deal-btn">Deal</button>
+                </div>
+                <div class="game-actions" style="display: none;">
+                    <button id="blackjack-hit-btn">Hit</button>
+                    <button id="blackjack-stay-btn">Stay</button>
+                </div>
+            </div>
+            <p id="blackjack-message"></p>
+        </div>
+
+        <!-- Roulette Panel -->
+        <div id="roulette-panel" class="game-panel">
+            <h2>Roulette</h2>
+            <div class="game-area">
+                <div id="roulette-board">
+                    <div id="roulette-wheel"></div>
+                    <p id="roulette-result-display">Place your bet!</p>
+                </div>
+                <div class="roulette-controls">
+                    <h3>Place Your Bets:</h3>
+                    <div class="betting-row">
+                        <label for="roulette-bet">Amount:</label>
+                        <input type="number" id="roulette-bet" min="1" value="10">
+                    </div>
+                    <div class="betting-row">
+                        <button class="roulette-color-btn" data-bet="red">Bet on Red (2x)</button>
+                        <button class="roulette-color-btn" data-bet="black">Bet on Black (2x)</button>
+                    </div>
+                    <div class="betting-row">
+                        <button class="roulette-number-btn" data-bet="even">Bet on Even (2x)</button>
+                        <button class="roulette-number-btn" data-bet="odd">Bet on Odd (2x)</button>
+                    </div>
+                    <p id="roulette-message"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

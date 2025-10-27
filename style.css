@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    border-bottom: 2px solid #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#money-display {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+
+nav button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+.game-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.game-panel {
+    display: none;
+}
+
+.game-panel.active {
+    display: block;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hand {
+    border: 1px solid #555;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls input, .controls button {
+    font-size: 1em;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Roulette Specifics */
+#roulette-wheel {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid gold;
+    background: radial-gradient(circle at 50% 50%, #fff 2%, gold 2%, #fff 4%, red 4%, #fff 6%, black 6%, #fff 8%, green 8%, #fff 10%);
+    margin: 20px auto;
+}
+
+#roulette-result-display {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.roulette-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.roulette-color-btn, .roulette-number-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 150px;
+}
+
+[data-bet="red"] { background-color: #ff0000; }
+[data-bet="black"] { background-color: #000000; }
+[data-bet="even"] { background-color: #008000; }
+[data-bet="odd"] { background-color: #0000ff; }
